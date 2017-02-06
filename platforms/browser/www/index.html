@@ -8,13 +8,49 @@
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     </head>
     <body>
+    	<header>
+    		<nav>
+				<div class="nav-wrapper green accent-3">
+					<a href="#!" class="brand-logo">COSALCO</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="badges.html">Components</a></li>
+						<li><a href="collapsible.html">Javascript</a></li>
+						<li><a href="mobile.html">Mobile</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="badges.html">Components</a></li>
+						<li><a href="collapsible.html">Javascript</a></li>
+						<li><a href="mobile.html">Mobile</a></li>
+					</ul>
+				</div>
+			</nav>
+    	</header>
 		<div class="container">
 			<div class="row">
 				<div class="col s12">
+					<div class="card-panel">
+						<h5 class="center-align">Registrate en nuestro sorteo</h5>
+						<form>
+							<div class="input-field">
+								<input type="text" id="last_name" class="validate">
+								<label for="last_name">Ingrese código</label>
+							</div>
+
+							<button class="waves-effect waves-light btn">Registrar</button> 
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<h5 class="center-align">Vea nuestros productos destacados</h5>
 					<div class="card large">
 						<div class="card-image">
 							<img src="img/card1.jpg">
-							<span class="card-title">Título de la Tarjeta</span>
+							<span class="card-title">Producto 1</span>
 						</div>
 						<div class="card-content">
 							<p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
@@ -29,7 +65,7 @@
 					<div class="card large">
 						<div class="card-image">
 							<img src="img/card2.jpg">
-							<span class="card-title">Título de la Tarjeta</span>
+							<span class="card-title">Producto 2</span>
 						</div>
 						<div class="card-content">
 							<p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
@@ -42,7 +78,7 @@
 					<div class="card large">
 						<div class="card-image">
 							<img src="img/card3.jpg">
-							<span class="card-title">Título de la Tarjeta</span>
+							<span class="card-title">Producto 3</span>
 						</div>
 						<div class="card-content">
 							<p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
@@ -59,5 +95,10 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
+      	<script>
+      		$( document ).ready(function(){
+      			$(".button-collapse").sideNav();
+      		})
+      	</script>
     </body>
 </html>

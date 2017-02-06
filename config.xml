@@ -2,10 +2,10 @@
 <widget id="com.yasser.cosalco" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Cosalco</name>
     <description>
-        A blank PhoneGap app.
+    	Aplicación para registro online de sorteo.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="yasser.mussa@gmail.com" href="https://www.linkedin.com/in/yasser-jamal-mussa">
+        Yasser Mussa
     </author>
     <content src="index.html" />
     <access origin="*" />
