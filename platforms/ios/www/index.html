@@ -58,7 +58,6 @@
 						</div>
 						<div class="card-action">
 							<a href="#">Este es un enlace</a>
-							<a href="#">Este es un enlace</a>
 						</div>
 					</div>
 				</div>
@@ -72,7 +71,6 @@
 							<p>Soy una tarjeta muy simple. Soy buena mostrando pequeños trozos de información. Soy conveniente porque requiero pocas etiquetas para usarme efectivamente.</p>
 						</div>
 						<div class="card-action">
-							<a href="#">Este es un enlace</a>
 							<a href="#">Este es un enlace</a>
 						</div>
 					</div>
@@ -95,25 +93,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
-      	<script>
-      		document.addEventListener('deviceready', initApp, false);
-
-      		var fbLoginSuccess = function (userData) 
-			{
-			    alert("UserInfo: " + JSON.stringify(userData));
-			}
-
-			function initApp()
-			{
-			    facebookConnectPlugin.login(["public_profile"],
-			        fbLoginSuccess,
-			        function (error) { alert("" + error) }
-			    );
-			}
-
-      		$( document ).ready(function(){
-      			$(".button-collapse").sideNav();
-      		})
-      	</script>
+      	<script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
