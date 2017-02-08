@@ -40,6 +40,7 @@
 							</div>
 
 							<button class="waves-effect waves-light btn">Registrar</button> 
+							<button type="button" class="waves-effect waves-light btn" onclick="initApp">Login</button>
 						</form>
 					</div>
 				</div>
@@ -85,7 +86,6 @@
 						</div>
 						<div class="card-action">
 							<a href="#">Este es un enlace</a>
-							<a href="#">Este es un enlace</a>
 						</div>
 					</div>
 				</div>
@@ -96,6 +96,21 @@
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
       	<script type="text/javascript" src="js/materialize.min.js"></script>
       	<script>
+      		document.addEventListener('deviceready', initApp, false);
+
+      		var fbLoginSuccess = function (userData) 
+			{
+			    alert("UserInfo: " + JSON.stringify(userData));
+			}
+
+			function initApp()
+			{
+			    facebookConnectPlugin.login(["public_profile"],
+			        fbLoginSuccess,
+			        function (error) { alert("" + error) }
+			    );
+			}
+
       		$( document ).ready(function(){
       			$(".button-collapse").sideNav();
       		})

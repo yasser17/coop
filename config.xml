@@ -10,3 +10,7 @@
     <content src="index.html" />
     <access origin="*" />
 </widget>
+<gap:plugin name="com.phonegap.plugins.facebookconnect" version="<VERSION>">
+    <param name="APP_ID" value="707821006054644" />
+    <param name="APP_NAME" value="COSALCO" />
+</gap:plugin>

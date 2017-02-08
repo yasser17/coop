@@ -21,12 +21,22 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="FacebookConnectPlugin">
+        <param name="ios-package" value="FacebookConnectPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="FacebookConnectPlugin" value="FacebookConnectPlugin" />
+    <access origin="https://m.facebook.com" />
+    <access origin="https://graph.facebook.com" />
+    <access origin="https://api.facebook.com" />
+    <access origin="https://*.fbcdn.net" />
+    <access origin="https://*.akamaihd.net" />
     <name>Cosalco</name>
     <description>
-        A blank PhoneGap app.
+    	Aplicación para registro online de sorteo.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="yasser.mussa@gmail.com" href="https://www.linkedin.com/in/yasser-jamal-mussa">
+        Yasser Mussa
     </author>
     <content src="index.html" />
     <access origin="*" />

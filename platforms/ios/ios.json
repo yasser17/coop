@@ -15,6 +15,56 @@
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FacebookConnectPlugin\"><param name=\"ios-package\" value=\"FacebookConnectPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<plugin name=\"FacebookConnectPlugin\" value=\"FacebookConnectPlugin\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://m.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://graph.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://api.facebook.com\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.fbcdn.net\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://*.akamaihd.net\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "FacebookAppID": [
+                        {
+                            "xml": "<string>707821006054644</string>",
+                            "count": 1
+                        }
+                    ],
+                    "FacebookDisplayName": [
+                        {
+                            "xml": "<string>COSALCO</string>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLSchemes</key><array><string>fb707821006054644</string></array></dict></array>",
+                            "count": 1
                         }
                     ]
                 }
@@ -26,6 +76,11 @@
             "PACKAGE_NAME": "com.yasser.cosalco"
         },
         "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.yasser.cosalco"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "707821006054644",
+            "APP_NAME": "COSALCO",
             "PACKAGE_NAME": "com.yasser.cosalco"
         }
     },
@@ -55,10 +110,19 @@
             "clobbers": [
                 "Connection"
             ]
+        },
+        {
+            "id": "phonegap-facebook-plugin.FacebookConnectPlugin",
+            "file": "plugins/phonegap-facebook-plugin/facebookConnectPlugin.js",
+            "pluginId": "phonegap-facebook-plugin",
+            "clobbers": [
+                "facebookConnectPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
         "com.phonegap.plugins.PushPlugin": "2.5.0",
-        "cordova-plugin-network-information": "1.3.1"
+        "cordova-plugin-network-information": "1.3.1",
+        "phonegap-facebook-plugin": "0.12.0"
     }
 }

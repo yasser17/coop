@@ -12,6 +12,11 @@
         },
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.yasser.cosalco"
+        },
+        "phonegap-facebook-plugin": {
+            "APP_ID": "707821006054644",
+            "APP_NAME": "COSALCO",
+            "PACKAGE_NAME": "com.yasser.cosalco"
         }
     },
     "dependent_plugins": {}
