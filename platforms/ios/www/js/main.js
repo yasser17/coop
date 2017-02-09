@@ -8,6 +8,7 @@ window.fbAsyncInit = function() {
 	  xfbml      : true,
 	  version    : 'v2.8'
 	});
+	checkLoginState();
 };
 (function(d, s, id){
 	var js, fjs = d.getElementsByTagName(s)[0];
@@ -17,11 +18,15 @@ window.fbAsyncInit = function() {
 	fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-new Vue({
+var vm = new Vue({
 	el: '#app',
 	data: {
-		user: null,
-	}
+		user: {},
+		connected: false,
+	},
+	methods: {
+
+	},
 });
 
 
@@ -32,7 +37,13 @@ function onDeviceReady()
 
 function checkLoginState() {
 	FB.getLoginStatus(function(response) {
-		console.log(response);
+		if(response.status == "connected") {
+			FB.api('/me?fields=id,name,cover,first_name,last_name,gender,age_range,link,locale,picture,verified,email,birthday', function(response) {
+				console.log(response);
+				vm.user = {name: response.name, email: response.email, first_name: response.first_name, last_name: response.last_name, gender: response.gender, bday: response.birthday, facebook_id: response.id};
+			});
+			vm.connected = true;
+		}
 	});
 }
 
@@ -42,7 +53,6 @@ var fbLoginSuccess = function (userData)
 	FB.api('/me?fields=id,cover,name,first_name,last_name,gender,age_range,link,locale,picture,verified,email,birthday,likes', function(response) {
 		console.log(response);
 	});
-	$('#status').html('Login success');
 }
 
 function loginToFacebook()
@@ -72,6 +82,5 @@ function loginStatus()
 }
 
 $( document ).ready(function(){
-
 	$(".button-collapse").sideNav();
 })
